@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="preload" href="style.css" as="style">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="contenedor">
+        <div class="contenedor-usuario">
+            <h1 class="no-margin titulo"><span class="titulo-nombre">Task</span>_Manager</h1>
+
+            <!-- Agregando tarea -->
+            <div id="seccion-agregar">
+                <div class="campos">
+                    <label>Fecha: </label>
+                    <input id="fecha-limite" class="input-fecha" type="date">
+                </div>
+
+                <div class="campos">
+                    <label>Describir tarea: </label>
+                    <textarea id="descripcion" class="input-descripcion" cols="30" rows="10"></textarea>
+                </div>
+                
+                <div id="error" class="campos mensaje-error">
+                    <p><span>Error:</span>  Debes llenar todos los campos</p>
+                </div>
+
+                <button id="agregar" class="boton-agregar">Agregar</button>
+            </div>
+        </div>
+
+        <div class="contenedor-salida">
+            <h2 class="no-margin subtitulo">Tareas pendientes</h2>
+            <div id="tareas" class="contenedor-tareas">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
